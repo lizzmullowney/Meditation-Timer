@@ -33,9 +33,9 @@ function Form() {
       <header>
         <h2>🪷New Journal Entry🪷</h2>
       </header>
-
+      <div>
       <form onSubmit={handleSubmit}>
-
+       <div>
         <label htmlFor="date">Entry Date</label>
         <input
         type="date"
@@ -43,9 +43,11 @@ function Form() {
         name="date"
         value={date}
         onChange={handleDateChange}/>
-
-
+      </div>
+      <div>
       <label htmlFor="feeling">How are you feeling?</label>
+
+
       <select id="feeling" name="feeling" value={feeling} onChange={handleFeelingChange}>
         <option value="">--Please select an option--</option>
         <option value="calm">🏝 Calm 🏝</option>
@@ -54,11 +56,13 @@ function Form() {
         <option value="anxious"> ⛈ Anxious ⛈</option>
         <option value="overwhelmed"> 🌪 Overwhelmed 🌪</option>
       </select>
-
+      </div>
+      <div>
       <label htmlFor="text">Record your thoughts here:</label>
       <textarea id="text" name="text" value={text} onChange={handleTextChange} />
-
+      </div>
       </form>
+      </div>
     </section>
   )
 };
