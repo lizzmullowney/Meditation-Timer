@@ -8,7 +8,8 @@ let journalSchema = mongoose.Schema({
     type: String,
     required: true,
     enum: ["calm", "hopeful", "conflicted", "anxious", "overwhelmed"]
-  }
+  },
+  text: {type: String, required: true}
 });
 
 let Journal = mongoose.model('Journal', journalSchema);
