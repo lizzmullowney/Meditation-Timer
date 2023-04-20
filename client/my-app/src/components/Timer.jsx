@@ -51,7 +51,7 @@ function Timer() {
 
   return (
     <div className="timer">
-      <h1>{formatTime(timeRemaining)}</h1>
+      <h1 className="timer-numbers">{formatTime(timeRemaining)}</h1>
       <div>
         <label htmlFor="minutes">Minutes:</label>
         <input type="number" id="minutes" value={minutes} onChange={handleMinutesChange} />

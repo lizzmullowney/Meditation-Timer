@@ -17,3 +17,8 @@ code {
 .bigTitle {
   color: lavender;
 }
+
+.timer-numbers {
+  font-size: 150px;
+  color: rgb(174, 92, 189)
+}
