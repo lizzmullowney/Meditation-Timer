@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+//require axios so I can send journal entry to server/db
+import axios from 'axios';
 
 
 function Form() {
@@ -13,6 +14,8 @@ function Form() {
   //================================================
   //TO DO??
   //create State variable for if the form shows up or not
+  const [visible, setVisible] = useState('false');
+
 
   //change handler for date
   function handleDateChange(event) {
@@ -40,7 +43,13 @@ function Form() {
 
 
     //make an axios call here to save the jounral entry to the db require axios up at the top
-
+  axios.post('http://localhost:1128/journal', entryObject)
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((err) =>{
+    console.log('error in adding journal entry', err)
+  })
 
     console.log('This will bean example of a journal entry', entryObject);
 
@@ -58,7 +67,7 @@ function Form() {
 
   //create form JSX
   return (
-    <section>
+    <section className='form-component'>
       <header>
         <h2>🪷New Journal Entry🪷</h2>
       </header>

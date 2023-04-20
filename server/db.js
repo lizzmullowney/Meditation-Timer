@@ -15,5 +15,6 @@ let journalSchema = mongoose.Schema({
 let Journal = mongoose.model('Journal', journalSchema);
 
 
+
 module.exports.Journal = Journal;
 
