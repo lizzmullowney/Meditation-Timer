@@ -7,7 +7,7 @@ import Journal from './components/Journal.jsx'
 function App() {
   return (
     <div className="App">
-       <h1 className="bigTitle">Peaceful Meditation Hub</h1>
+       <h1 className="bigTitle">Peaceful Meditation Timer</h1>
       <Timer />
       <Journal />
     </div>
